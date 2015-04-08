@@ -19,18 +19,22 @@
 					Workout Log
 				</div>
 			</div>
-			<div class="row margin">
+			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
-					<input type="text" name="amount" id="amount" placeholder="How many?">
-					<input type="text" name="weight" id="weight" placeholder="How heavy?">
-					<input type="text" name="context" id="context" placeholder="What was it?">
+					<div class="row">
+						<form>
+							<input class="col-md-3" type="text" name="amount" id="amount" placeholder="How many?" required>
+							<input class="col-md-3" type="text" name="weight" id="weight" placeholder="How heavy?" required>
+							<input class="col-md-3" type="text" name="context" id="context" placeholder="What was it?" required>
+							<input class="col-md-3" type="submit">
+						</form>
+					</div>
 				</div>
 			</div>
-			<div class="row margin">
+			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
-					<ul>
-						<li>30x 40lb tricep press</li>
-						<li>30x 25lb bicep curl</li>
+					<ul id="workoutlog">
+						@yield('listitems')
 					</ul>
 				</div>
 			</div>

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWorkoutTable extends Migration {
+class CreateWorkoutsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,13 @@ class CreateWorkoutTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('workout', function(Blueprint $table)
+		Schema::create('workouts', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->timestamps();
+			$table->text('description');
+			$table->integer('amount');
+			$table->integer('weight');
 		});
 	}
 
@@ -26,7 +29,7 @@ class CreateWorkoutTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('workout');
+		Schema::drop('workouts');
 	}
 
 }

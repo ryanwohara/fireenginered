@@ -3,8 +3,10 @@
 use FireEngineRed\Http\Requests; use FireEngineRed\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use DB;
 use Illuminate\Support\Facades\Session;
+use \DateTime;
 
 class ApiController extends Controller {
 
@@ -15,13 +17,15 @@ class ApiController extends Controller {
 
 	public function add(Request $request)
 	{
-		return $request;
-		DB::table('workouts')->insert(['amount' => $request->amount, 'weight' => $request->add, 'description' => $request->description]);
-		return "{'success': 1}";
+		DB::table('workouts')->insert(['amount' => $request->amount, 'weight' => $request->weight, 'description' => $request->description, 'created_at' => new DateTime, 'updated_at' => new DateTime]);
+		return response("", 200)
+	              ->header('Location', '/');
 	}
 
 	public function del($id)
 	{
-		//
+		DB::table('workouts')->delete(['id' => $id]);
+		return response("", 200)
+	              ->header('Location', '/');
 	}
 }

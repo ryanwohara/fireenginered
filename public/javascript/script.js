@@ -8,11 +8,8 @@ $(document).ready(function(){
 			element = data[value];
 			post_data[element.name] = element.value;
 		});
-//		post_data['_token'] = "{{ csrf_token() }}";
-		export_data = JSON.stringify( post_data );
-//		alert(export_data);
-		$.post( '/api/add', export_data, function(data) {
-			alert(data);
+		$.post( '/api/add', post_data, function(data) {
+			location.reload();
 		});
 	});
 	

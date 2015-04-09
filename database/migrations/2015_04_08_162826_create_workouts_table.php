@@ -19,6 +19,7 @@ class CreateWorkoutsTable extends Migration {
 			$table->text('description');
 			$table->integer('amount');
 			$table->integer('weight');
+			$table->integer('active');
 		});
 	}
 

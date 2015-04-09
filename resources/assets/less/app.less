@@ -22,10 +22,6 @@ a, a:link, a:visited, a:hover, a:active {
 	text-align: center;
 }
 
-#entryinput {
-	width: 50%;
-}
-
 li {
 	font-size: 2.5em;
 	position: relative;
@@ -35,6 +31,10 @@ li {
 
 .gray {
 	color: #7A7A7A;
+}
+
+.negative_margin {
+	margin-bottom: -35px;
 }
 
 .translate_up {
@@ -56,6 +56,14 @@ li {
 	overflow-y: scroll;
 }
 
-.delete a {
+.edit a, .delete a {
 	font-size: .4em;
+}
+
+.editform {
+	display: none;
+}
+
+.editform * {
+	font-size: 0.5em;
 }

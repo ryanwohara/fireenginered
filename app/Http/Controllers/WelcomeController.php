@@ -2,6 +2,7 @@
 
 use DB;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Form;
 
 class WelcomeController extends Controller {
 
@@ -33,7 +34,7 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		$items = DB::table('workouts')->get();
+		$items = DB::table('workouts')->where(['active' => 1])->get();
 
 		return view('api', compact('items'));
 	}

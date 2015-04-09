@@ -1,6 +1,5 @@
 $(document).ready(function(){
-
-	$("form").submit(function(event) {
+	$(".addform").submit(function(event) {
 		event.preventDefault();
 		data = $( this ).serializeArray();
 		post_data = {}
@@ -11,6 +10,11 @@ $(document).ready(function(){
 		$.post( '/api/add', post_data, function(data) {
 			location.reload();
 		});
+	});
+
+	$(".edit").click(function(event) {
+		event.preventDefault();
+		$(this).parent().find(".editform").toggle(50);
 	});
 	
 });

@@ -13,8 +13,7 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('/api/show', 'ApiController@show');
-Route::get('/api/del/{id}', 'ApiController@del');
-Route::post('/api/add', 'ApiController@add');
-
-Route::get('/js', 'ResourceController@js');
+Route::get('api/show', 'ApiController@show');
+Route::post('api/add', 'ApiController@add');
+Route::get('api/del/{id}', 'ApiController@del');
+Route::patch('api/edit', 'ApiController@edit');

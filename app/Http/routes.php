@@ -17,8 +17,4 @@ Route::get('/api/show', 'ApiController@show');
 Route::get('/api/del/{id}', 'ApiController@del');
 Route::post('/api/add', 'ApiController@add');
 
-/*Route::get('home', 'HomeController@index');
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);*/
+Route::get('/js', 'ResourceController@js');

@@ -5,7 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="/js/script.js" type="text/javascript"></script>
+		<script src="/js" type="text/javascript"></script>
 		<style>
 			@import url(/css/fonts/opensanscondensed.css);
 			@import url(/css/fonts/opensans.css);
@@ -27,6 +27,7 @@
 							<input class="col-md-3" type="text" name="weight" id="weight" placeholder="How heavy?" required>
 							<input class="col-md-3" type="text" name="context" id="context" placeholder="What was it?" required>
 							<input class="col-md-3" type="submit">
+							<input type="hidden" name="_token" value="{{{ csrf_token() }}}">
 						</form>
 					</div>
 				</div>

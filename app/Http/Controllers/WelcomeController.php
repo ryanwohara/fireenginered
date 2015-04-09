@@ -1,6 +1,7 @@
 <?php namespace FireEngineRed\Http\Controllers;
 
 use DB;
+use Illuminate\Support\Facades\Session;
 
 class WelcomeController extends Controller {
 

@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: FireEngineRed
+        psr4_prefix: FireEngineRed
+        src_path: app

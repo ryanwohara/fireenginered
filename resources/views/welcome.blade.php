@@ -4,6 +4,14 @@
 		<title>Workout Log</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="csrf-token" content="{{ csrf_token() }}" />
+		<script type="text/javascript">
+		    $.ajaxSetup({
+		        headers: {
+		            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		        }
+		    });
+		</script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="/js" type="text/javascript"></script>
 		<style>
@@ -27,7 +35,7 @@
 							<input class="col-md-3" type="text" name="weight" id="weight" placeholder="How heavy?" required>
 							<input class="col-md-3" type="text" name="context" id="context" placeholder="What was it?" required>
 							<input class="col-md-3" type="submit">
-							<input type="hidden" name="_token" value="{{{ csrf_token() }}}">
+<?php //							<input type="hidden" name="_token" value="{{{ csrf_token() }}}"> ?>
 						</form>
 					</div>
 				</div>
